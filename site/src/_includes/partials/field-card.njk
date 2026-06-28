@@ -1,0 +1,31 @@
+<p class="subhead">Field Card</p>
+<div class="field-card">
+  <dl>
+    <dt>Genus</dt>
+    <dd><em lang="la">{{ entry.genus }}</em></dd>
+
+    <dt>Status</dt>
+    <dd>{% include "partials/status-pill.njk" %}</dd>
+
+    <dt>First observed</dt>
+    <dd>{{ entry.first_observed }}</dd>
+
+    <dt>Biome</dt>
+    <dd>{{ entry.biome }}</dd>
+
+    <dt>Observer</dt>
+    <dd>{{ entry.displayObserver }}</dd>
+
+    {% if entry.plates and entry.plates.length %}
+      <dt>Plates</dt>
+      <dd>
+        {% for plate in entry.plates -%}
+          <a href="/plates/{{ plate }}">Plate {{ loop.index | romanNumeral }}</a>{%- if not loop.last %}, {% endif -%}
+        {%- endfor %}
+      </dd>
+    {% endif %}
+
+    <dt>Source</dt>
+    <dd><a href="{{ site.repo }}/blob/main/entries/{{ entry.filename }}" rel="external">entries/{{ entry.filename }}</a></dd>
+  </dl>
+</div>

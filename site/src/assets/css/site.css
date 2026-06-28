@@ -1,0 +1,898 @@
+/* ============================================================
+   A Field Guide to Nox Atria VII — base stylesheet
+   Palette inverted for a dark world (black page, light text);
+   typography ported from lexical_backrooms/styles.py.
+   ============================================================ */
+
+@font-face {
+  font-family: "PP Mondwest";
+  src: url("../fonts/PPMondwest-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PxPlus IBM VGA8";
+  src: url("../fonts/PxPlus_IBM_VGA8.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Palette — inverted for a dark world. The page is the void; text is made light. */
+  --paper:         #0a0b0d;   /* the void: page background */
+  --panel:         #15171c;
+  --card:          #111318;
+  --input:         #1a1d23;
+  --ink:           #e7e4da;   /* bone white: primary text */
+  --border:        #3a3e46;
+  --muted:         #9b9d96;
+  --muted-light:   #71746d;
+  --status-green:  #46c46a;
+  --accent-red:    #d76a6a;
+  --accent-yellow: #c7b24a;
+  --separator:     #41444c;
+
+  /* Glow for ASCII plates — faint bioluminescence against the dark */
+  --glow:          #cfe6df;
+
+  /* Typography */
+  --font-body: "PP Mondwest", Georgia, serif;
+  --font-mono: "PxPlus IBM VGA8", "Courier New", monospace;
+
+  /* Sizing */
+  --sidebar-width: 240px;
+  --content-max:   720px;
+}
+
+/* Reset (minimal) */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+img, svg { max-width: 100%; height: auto; display: block; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+a:hover { background: var(--ink); color: var(--paper); text-decoration: none; }
+
+/* ============================================================
+   Site header — sticky paper bar across the top of every page
+   ============================================================ */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 9px 20px 7px;
+  background: var(--paper);
+  border-bottom: 1px solid var(--border);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 11px;
+}
+
+.site-header a {
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.site-header a:hover {
+  background: transparent;
+  color: var(--muted);
+}
+
+.site-header .site-title {
+  font-weight: 400;
+}
+
+.site-header .repo-link {
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+/* Page shell — left TOC sidebar + main content. Right rail added in Phase 1. */
+.layout {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+  min-height: 100vh;
+}
+
+.sidebar {
+  background: var(--paper);
+  padding: 40px 20px 24px;
+}
+
+.content {
+  padding: 40px 36px;
+  max-width: 100%;
+}
+
+.content-inner {
+  max-width: var(--content-max);
+}
+
+/* Footer */
+.site-footer {
+  border-top: 2px solid var(--border);
+  padding: 12px 20px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: var(--muted);
+  background: var(--paper);
+}
+
+/* Headings — body font dominant, VGA reserved for class="subhead" */
+h1 { font-size: 44px; line-height: 1.1; margin: 0 0 12px; font-weight: 400; }
+h2 { font-size: 28px; line-height: 1.2; margin: 32px 0 12px; font-weight: 400; }
+h3 { font-size: 22px; margin: 24px 0 10px; font-weight: 400; }
+
+.subhead {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0 0 14px;
+}
+
+hr.separator {
+  border: 0;
+  border-top: 1px dashed var(--separator);
+  margin: 28px 0;
+}
+
+p { margin: 0 0 1em; }
+
+/* ============================================================
+   Entry pages — three columns: sidebar | main | rail
+   ============================================================ */
+
+.layout--entry {
+  grid-template-columns: var(--sidebar-width) minmax(0, 1fr) 420px;
+}
+
+.rail {
+  background: var(--paper);
+  padding: 40px 24px 24px;
+}
+
+/* Entry header */
+.entry-header {
+  padding-bottom: 18px;
+  margin-bottom: 28px;
+}
+
+/* Solid divider sits with the plates, so when there are no plates
+   the line disappears entirely (avoids doubling with the section underline). */
+.entry-plates {
+  border-top: 1px solid var(--border);
+  padding-top: 28px;
+}
+
+/* Without plates, give the first section a touch more breathing room
+   to mark the transition from header into body. */
+.entry-header + .entry-section {
+  margin-top: 12px;
+}
+
+.entry-title {
+  font-family: var(--font-body);
+  font-size: 52px;
+  line-height: 1;
+  margin: 0 0 6px;
+  font-weight: 400;
+}
+
+.entry-binomial {
+  font-family: var(--font-body);
+  font-size: 22px;
+  color: var(--muted);
+  margin: 0 0 14px;
+}
+
+.entry-meta {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 11px;
+  color: var(--muted-light);
+  margin: 0;
+}
+
+/* Plates */
+.entry-plates {
+  margin: 0 0 36px;
+  /* border-top + padding-top supplied above */
+}
+
+.entry-plate {
+  margin: 0 0 18px;
+  border: 2px solid var(--border);
+  background: var(--card);
+  padding: 0;
+  overflow: hidden;
+}
+
+.entry-plate img {
+  width: 100%;
+  display: block;
+}
+
+/* Entry sections */
+.entry-section {
+  margin: 0 0 28px;
+}
+
+.entry-section .subhead {
+  margin: 0 0 12px;
+  color: var(--ink);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 6px;
+}
+
+.entry-prose p {
+  margin: 0 0 0.9em;
+}
+
+.entry-prose strong {
+  font-family: var(--font-mono);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.82em;
+  color: var(--ink);
+}
+
+.entry-prose em {
+  font-style: italic;
+}
+
+.entry-prose code {
+  font-family: var(--font-mono);
+}
+
+/* ASCII plates — rendered from fenced code blocks. The dark is the page;
+   the marks are made of light. */
+.entry-prose pre {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.25;
+  color: var(--glow);
+  background: #000;
+  border: 1px solid var(--border);
+  padding: 16px 18px;
+  margin: 0 0 22px;
+  overflow-x: auto;
+  white-space: pre;
+  text-shadow: 0 0 7px rgba(170, 220, 205, 0.22);
+}
+
+.entry-prose pre code {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  padding: 0;
+}
+
+/* ============================================================
+   Field card — mimics the .control-group / floating-label
+   fieldset look from newUI.html
+   ============================================================ */
+
+.field-card {
+  border: 1px solid var(--border);
+  padding: 14px;
+  background: var(--panel);
+  margin: 0 0 28px;
+}
+
+.field-card dl {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px 0;
+}
+
+.field-card dt {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 10px;
+  color: var(--muted-light);
+  margin: 0;
+}
+
+.field-card dd {
+  margin: 2px 0 0;
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+/* ============================================================
+   Status pill — black-on-white pill with leading status dot
+   ============================================================ */
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--panel);
+  color: var(--ink);
+  border: 1px solid var(--border);
+  /* VGA glyphs sit high in their em-box; heavier padding-top centers them optically */
+  padding: 4px 8px 2px 6px;
+  line-height: 1;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 10px;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--muted-light);
+}
+
+.status-pill--abundant              .status-dot { background: var(--status-green); }
+.status-pill--colonizing            .status-dot { background: var(--status-green); }
+.status-pill--irruptive             .status-dot { background: var(--accent-yellow); }
+.status-pill--vulnerable            .status-dot { background: var(--accent-yellow); }
+.status-pill--critically-endangered .status-dot { background: var(--accent-red); }
+.status-pill--relict                .status-dot { background: var(--accent-red); }
+.status-pill--extinct               .status-dot { background: var(--muted-light); }
+.status-pill--data-deficient        .status-dot { background: var(--muted-light); }
+
+.status-qualifier {
+  display: block;
+  font-style: italic;
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 4px;
+  line-height: 1.3;
+}
+
+/* ============================================================
+   Marginalia — ASCII preserved literally, VGA monospace
+   (Phase 2 will float these next to anchored sections;
+    for now they stack in the right rail.)
+   ============================================================ */
+
+.rail-marginalia .subhead {
+  margin-top: 18px;
+  margin-bottom: 8px;
+}
+
+.marginalia {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 1.3;
+  color: var(--ink);
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 12px 14px;
+  margin: 0 0 14px;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+/* ============================================================
+   Responsive — rail falls below main, then sidebar collapses
+   ============================================================ */
+
+@media (max-width: 1180px) {
+  .layout--entry {
+    grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+  }
+  .rail {
+    grid-column: 1 / -1;
+    border-top: 1px solid var(--border);
+    padding-top: 24px;
+  }
+}
+
+@media (max-width: 720px) {
+  .layout, .layout--entry {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    padding: 0 20px;
+    border-bottom: 1px solid var(--border);
+  }
+  .content {
+    padding: 24px 20px;
+  }
+  .entry-title { font-size: 40px; }
+}
+
+/* ============================================================
+   Site TOC (left sidebar nav on every page)
+   ============================================================ */
+
+.site-toc-checkbox {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.site-toc-toggle {
+  display: none;
+}
+
+.site-toc section {
+  margin-bottom: 22px;
+}
+
+.site-toc .subhead {
+  margin-bottom: 8px;
+}
+
+.site-toc ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-toc li {
+  margin: 5px 0;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+.site-toc a {
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.site-toc a:hover {
+  text-decoration: underline;
+  background: transparent;
+  color: var(--ink);
+}
+
+@media (max-width: 720px) {
+  .site-toc-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 0 12px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    line-height: 1;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .site-toc-checkbox:focus-visible + .site-toc-toggle {
+    outline: 1px dashed var(--border);
+    outline-offset: 3px;
+  }
+
+  .site-toc-arrow {
+    transition: transform 120ms ease;
+  }
+
+  .site-toc-panel {
+    display: none;
+    padding: 10px 0 20px;
+  }
+
+  .site-toc-checkbox:checked + .site-toc-toggle .site-toc-arrow {
+    transform: rotate(180deg);
+  }
+
+  .site-toc-checkbox:checked ~ .site-toc-panel {
+    display: block;
+  }
+}
+
+/* ============================================================
+   Cover (home)
+   ============================================================ */
+
+.cover-title {
+  font-size: 56px;
+  line-height: 1;
+  margin: 0 0 6px;
+}
+
+.cover-subtitle {
+  margin-bottom: 32px;
+}
+
+.cover-intro p {
+  font-size: 19px;
+  line-height: 1.55;
+  margin: 0 0 1em;
+  max-width: 640px;
+}
+
+.cover-latest {
+  margin: 18px 0 28px;
+}
+
+.cover-entry {
+  border-top: 1px solid var(--border);
+}
+
+.cover-entry:last-child {
+  border-bottom: 1px solid var(--border);
+}
+
+.cover-entry-link {
+  display: block;
+  padding: 20px 0;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.cover-entry-link:hover {
+  background: var(--card);
+  color: var(--ink);
+}
+
+.cover-entry-link:hover .cover-entry-title > span:first-child {
+  text-decoration: underline;
+}
+
+.cover-entry-title {
+  font-size: 30px;
+  line-height: 1.1;
+  margin: 0 0 8px;
+}
+
+.cover-entry-binomial {
+  font-size: 18px;
+  color: var(--muted);
+  margin-left: 8px;
+}
+
+.cover-entry-meta {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 10px;
+  color: var(--muted);
+  margin: 0 0 10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.cover-entry-teaser {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.55;
+  max-width: 640px;
+}
+
+/* ============================================================
+   Index lists / tables (entries, taxonomy children, status children)
+   ============================================================ */
+
+.entries-list {
+  width: 100%;
+  margin: 12px 0 24px;
+}
+
+.entries-list-header,
+.entries-list-row {
+  display: grid;
+  grid-template-columns: minmax(120px, 1fr) minmax(180px, 1.2fr) 210px;
+  gap: 14px;
+  align-items: start;
+}
+
+.entries-list-status {
+  justify-self: start;
+}
+
+.entries-list-header {
+  padding: 8px 14px 8px 0;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--muted);
+  border-bottom: 1px solid var(--border);
+}
+
+.entries-list-row {
+  padding: 8px 14px 8px 0;
+  border-bottom: 1px solid var(--separator);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.entries-list-row:hover {
+  background: var(--card);
+  color: var(--ink);
+}
+
+.entries-list-row:hover .entries-list-name {
+  text-decoration: underline;
+}
+
+.entries-list-name {
+  font-size: 18px;
+}
+
+@media (max-width: 720px) {
+  .entries-list-header {
+    display: none;
+  }
+
+  .entries-list-row {
+    display: block;
+    padding: 14px 0;
+  }
+
+  .entries-list-name,
+  .entries-list-binomial,
+  .entries-list-status {
+    display: block;
+  }
+
+  .entries-list-binomial {
+    margin-top: 2px;
+  }
+
+  .entries-list-status {
+    margin-top: 8px;
+  }
+}
+
+.entries-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0 24px;
+}
+
+.entries-table th,
+.entries-table td {
+  text-align: left;
+  padding: 8px 14px 8px 0;
+  vertical-align: top;
+  border-bottom: 1px solid var(--separator);
+}
+
+.entries-table thead th {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--muted);
+  border-bottom: 1px solid var(--border);
+}
+
+.entries-table tbody tr:hover td {
+  background: var(--card);
+}
+
+.entries-table td a {
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.entries-table td a:hover {
+  text-decoration: underline;
+  background: transparent;
+  color: var(--muted);
+}
+
+/* ============================================================
+   Taxonomy / status indexes — definition list
+   ============================================================ */
+
+.taxon-list {
+  margin: 20px 0;
+}
+
+.taxon-list dt {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  font-size: 22px;
+  margin-top: 18px;
+}
+
+.taxon-list dt a {
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.taxon-list dt a:hover {
+  text-decoration: underline;
+  background: transparent;
+}
+
+.taxon-count {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--muted-light);
+}
+
+.taxon-list dd {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 16px;
+  max-width: 560px;
+}
+
+/* ============================================================
+   Marginalia feed — sequence of dissents grouped by entry
+   ============================================================ */
+
+.marginalia-group {
+  margin: 28px 0;
+}
+
+.marginalia-group h2.subhead {
+  font-family: var(--font-body);
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 22px;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+
+.marginalia-group h2.subhead a {
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.marginalia-group h2.subhead a:hover {
+  text-decoration: underline;
+  background: transparent;
+}
+
+.marginalia-group .marginalia {
+  max-width: 720px;
+}
+
+/* ============================================================
+   Long prose pages (about / charter / laws / protocol)
+   ============================================================ */
+
+.long-prose h1, .long-prose h2, .long-prose h3, .long-prose h4 {
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+.long-prose h2 {
+  font-size: 24px;
+  margin: 28px 0 10px;
+  border-bottom: 1px solid var(--separator);
+  padding-bottom: 4px;
+}
+
+.long-prose h3 {
+  font-size: 19px;
+  margin: 20px 0 8px;
+}
+
+.long-prose p, .long-prose li {
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.long-prose ul, .long-prose ol {
+  padding-left: 1.4em;
+  margin: 0 0 1em;
+}
+
+.long-prose li {
+  margin: 4px 0;
+}
+
+.long-prose strong {
+  font-weight: 400;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.82em;
+}
+
+.long-prose code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background: var(--card);
+  padding: 0 4px;
+}
+
+.long-prose hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 28px 0;
+}
+
+.long-prose blockquote {
+  border-left: 2px solid var(--border);
+  margin: 16px 0;
+  padding: 4px 16px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* ============================================================
+   Page TOC (mini, top of long-form pages)
+   ============================================================ */
+
+.page-toc {
+  border: 1px solid var(--border);
+  background: var(--card);
+  padding: 12px 16px;
+  margin: 0 0 32px;
+  max-width: 360px;
+}
+
+.page-toc ol {
+  margin: 0;
+  padding-left: 1.6em;
+}
+
+.page-toc li {
+  font-size: 15px;
+  margin: 4px 0;
+}
+
+.page-toc a {
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.page-toc a:hover {
+  text-decoration: underline;
+  background: transparent;
+}
+
+/* ============================================================
+   Survey-voiced blockquote (used on sightings)
+   ============================================================ */
+
+.survey-note {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 11px;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  background: var(--card);
+  padding: 12px 16px;
+  margin: 20px 0 24px;
+}

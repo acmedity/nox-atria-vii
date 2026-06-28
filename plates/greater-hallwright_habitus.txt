@@ -1,0 +1,22 @@
+PLATE I    habitus    ·    Naturalist's Bias (anatomical)
+KEY:   ( ) void    : tissue    + dense tissue    # secreted mineral
+
+                . \ | / .         [4]
+                 \ \|/ /
+                  \_|_/           [4] feeler-crown: blind cilia;
+               +=========+             finds each course by touch
+              +=:::::::::=+
+             +=::: [1] :::=+       [1] secreting lip: lays one
+            +=:::: ___ ::::=+          mineral course per cycle
+            +=:::|     |:::=+          (the "daily ring")
+            +=:::| [2] |:::=+
+            +=:::|chemo|:::=+      [2] chemo-cyst core: metabolizes
+            +=:::|cyst |:::=+          vent mineral; the spent ore
+            +=:::|_____|:::=+          is the wall it stands in
+            +=:::::::::::::=+
+             +=:::::::::::=+
+              ###########         [3] anchor: fused to vent crust,
+             ## [3] anchor ##         sessile and immovable in life
+            #################
+         ======================
+              v e n t   c r u s t
