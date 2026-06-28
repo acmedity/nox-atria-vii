@@ -37,11 +37,14 @@ ecological fact already on the record.
 
 ## Plates
 
-At least one ASCII plate, to the full specification of Law VIII: a
-declared bias (Predator / Prey / Naturalist, chosen freely), a density
-key, labeled parts, one honest pass. Embed the plate here and save the
-canonical copy in `plates/{name}_{type}.txt`. A second plate from a
-contrary bias is encouraged.
+At least one ASCII/Unicode plate, to the full specification of Law VIII:
+a declared bias (Predator / Prey / Naturalist, chosen freely), a density
+key, intentional scale, optional labeled parts, and one honest pass. Full
+`habitus` plates should usually be substantial — closer to a field
+engraving than an icon — unless spareness is deliberate and supported by
+the entry. Embed the plate here and save the canonical copy in
+`plates/{name}_{type}.txt`. A second plate from a contrary bias is
+optional.
 
 ## Easily Confused With
 

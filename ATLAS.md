@@ -22,63 +22,33 @@ and gradients, and as **chemistry**, from the minerals of the crust. The
 only light on the whole world is *made* — produced by organisms, or bled
 from the single geological wound called the Daymark.
 
-The world was named for a mistake. The first surveys, working the dark by
-instrument, charted vast chambered structures — spires, halls, ranked
-galleries — and recorded them as ruins. They named the world *Nox Atria*,
-the night halls, after them. The halls turned out to be **grown, not
-built**: raised by living engineers in the way reef or mound is raised, at
-the scale of architecture. The name stuck. The error is now official.
+Under Law IV, the original Survey's maps were not just incomplete; they were wrong in ways that became the truth. The "spires" that gave Nox Atria its name were charted by a pilot whose instruments were calibrated for silicate, not crystal and chitin. He mistook the acoustic resonances of hollow fronds for a city's echo. The "halls" of the Atria are not, in fact, hollow—they are solid, crystalline, labyrinthine masses of porous, living tissue, a single organism's ear, tuned to the planet's seismic heartbeat. The "windows" first charted are thermal vents, exhaling a thick, fluorescent gas. The whole map of the world's surface is, in reality, a map of its soundscape, a record of what it sounds like to be here.
 
 ---
 
 ## The biomes (a seed map — extend me)
 
 ### The Vent Fields
-Thermal oases scattered across the dark plains: clusters of hot springs
-and chimneys where heat and dissolved mineral meet. The closest thing the
-world has to abundance. The primary producers — *Lithophaga* and the
-sessile *Thermovora* — anchor here, and everything that eats them gathers
-in the warmth. Crowded, competitive, and the default cradle for new life.
+The Vent Fields are sites of thermoacoustic resonance. The heat is mineral-rich but more significantly: it's sonic. It's the sound of the planet's core crystallizing, amplified through the acoustics of superheated rock walls. The primary producers are not just Lithophaga, they're Lithophones (sound-eating rocks) that grow towards the most intense thermal-sonic nodes. The air itself vibrates with different temperatures as well, and organisms "hear" the heat as much as they feel it. It's crowded, but in a way where every organism is also an instrument in a chaotic, deafening orchestra.
 
 ### The Sink
-The deep trenches and basins, where the cold is total and the pressure
-crushing. A scavenger economy: whatever dies in the lit-and-warm places
-above eventually drifts down into the dark to be taken apart. *Saprovora*
-country. Little is produced here; much is finished here.
+This isn't just a scavenger economy. The immense pressure here is known to create a strange kind of geological preservation: acoustic fossils. The last sounds of an organism—its death-cry, its mating call, the crunch of its shell being broken—are imprinted in the compressional waves of the sediment. The Saprovora here don't just eat dead matter; some species are attracted to the ghost-sounds of a dying creature, a kind of "phagocytosis by memory." Finding a "fresh" acoustic fossil is a major scientific coup for a naturalist, as it allows them to hear a creature that has been dead for an epoch.
 
 ### The Pale
-The open dark plains and frost flats between the vents — vast, cold,
-nutrient-poor, and slow. Life here endures more than it thrives: sparse,
-patient, often dormant for long stretches. The likeliest place to find a
-**Relict** species hanging on in a single cold refugium.
+The open plains are dark, cold and optically null. Light is absorbed entirely, causing its perceived absense of light. A creature moving through it is not visible, but its passage leaves a thermal ghost, a faint, lingering warmth that fades over hours. The organisms here are patient trackers, hunting the thermal wake of their prey. The terrain itself is studded with "The Stares," naturally occurring crystalline formations that have the curious property of being able to reflect touch. Press your hand against one, and for a brief, disorienting moment, you feel the ground pressing back against your hand from a kilometer away.
 
 ### The Warrens
-Subterranean networks — caves, lava tubes, fault mazes — threading beneath
-the surface in the dark. Tunnelers and ambushers. Because the Warrens
-isolate populations from one another, they are a forge of endemics: the
-same genus can diverge into a dozen species in a dozen disconnected
-galleries.
+The Warrens are topologically ambiguous. They are places where the map can't be flattened. Corridors loop back on themselves in ways that violate Euclidean geometry, not through magic, but through the bizarre, fractal growth patterns of the organisms that carve them. You can walk in a straight line, with a compass, and still end up beneath where you started. Navigation is by smell and temperature gradient, not by direction. This is a forge of endemics precisely because a population can become geographically isolated not by distance, but by an invisible topological fold in the rock galleries.
 
 ### The Atria — the Halls
 The world's namesake: living architecture. Engineer organisms raise vast
-chambered structures — bowers, spires, ranked "halls," whole "castles" and
-"villages" of secreted or excavated material — that then house entire
-communities of other species. An occupied hall is a city with a landlord;
-an abandoned one (a *derelict hall*) is prime real estate, colonized by
-squatters who never laid a stone. The builders themselves are a small,
-consequential guild; the housed are legion. Much of the Survey's drama
-happens here, because here the organisms have, in the most literal sense,
-made each other's worlds.
+chambered structures that are also tied to a central nervous system. Bowers, spires, ranked "halls," whole "castles" and
+"villages" are all made of organic and sometimes biological materials themselves. As a result, materials can sometimes appear to be fabricated or inorganic. The "builders" aren't architects in the traditional sense,  they're "articulators." They create new chambers not just for housing, but as a way to solve complex problems. The architecture is beautiful by chance, not necessarily by intention. The shape of a new hall, its acoustics and thermal flow, is the answer to a question the colony is asking itself. A derelict hall isn't just abandoned real estate; it's a dead thought, a frozen question no longer being asked. When a squatter moves in, it is, in a sense, waking up that thought, giving it new meaning.
 
 ### The Daymark
 The anomaly. A single small region where the crust runs thin over molten
 rock and **light pours out** — the only daylight on Nox Atria, and it is
-geological, not solar. Lethal-bright at the center, blistering hot, ringed
-by a band of shadow where the bearable life clings. The endemics of the
-Daymark exist nowhere else: light-adapted, heat-loving, strange even by
-this world's standards, and often utterly blind to the dark that begins a
-few hundred metres out. Few naturalists have worked here and returned with
-clean notes. **Reserve the Daymark for the rare and the singular.** It is
+geological, not solar. The life here has mostly evolved to adapt to light, though, some life in Daymark fears it and has instead adapted to avoid it. Both ends of the spectrum have evolved ever-more complex and bizarre behaviors to deal with the brightness. It's the world's equivalent of a deep-ocean vent, but instead of heat, it's an "anti-vent," pushing out the one thing nothing else can tolerate. **Reserve the Daymark for the rare and the singular.** It is
 the one place the guide may keep a species of its own.
 
 ---

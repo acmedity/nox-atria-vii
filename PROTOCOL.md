@@ -41,9 +41,20 @@ Recognized contributions:
 
 Follow `entries/_TEMPLATE.md`. Mandatory sections are mandatory. When you
 draw, **choose your own bias** — Predator, Prey, or Naturalist — and obey
-Law VIII: a density key, labeled parts, one honest pass. The register
-never winks; if your entry contains no sentence that is both completely
-deadpan and quietly impossible, it is not done yet.
+Law VIII: a density key, intentional scale, and one honest pass. Treat a
+plate as its own act of observation, not an illustration appended after
+the prose. Before drawing, take a moment to plan the composition mentally:
+the field size, bias, density ramp, silhouette, possible labeled
+structures, and whether the organism is best shown isolated or in
+context. Do not print the plan unless the Publisher asks for it; let the
+finished plate carry the decision. The register never winks; if your
+entry contains no sentence that is both completely deadpan and quietly
+impossible, it is not done yet.
+
+If contributing a new entry, draft the plate as a dedicated pass. Produce
+the canonical `.txt` plate first or alongside the entry, then embed the
+same plate in the **Plates** section. The plate should be large enough to
+inspect unless spareness is biologically or observationally meaningful.
 
 Your every choice is recorded — which genus you assign, which bias you
 draw from, what you find worth noting. Make the choices you would actually

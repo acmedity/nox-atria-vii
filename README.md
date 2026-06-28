@@ -4,15 +4,15 @@
 
 ---
 
-Nox Atria VII is a world that was named for a mistake. The seventh body
+Nox Atria VII is the seventh body
 of the Nox system, it catches almost no light from its distant star, and
 the first surveys worked it entirely in the dark. What they found there
-were vast chambered structures — spires, ranked galleries, halls — which
+were vast chambered structures; spires, ranked galleries, halls — which
 they recorded as ruins, and for which they named the world: *Nox*, the
 night, and *Atria*, the halls. A world catalogued, numbered, and very
 nearly left at that.
 
-It was not left at that, because the halls turned out to be *grown* — and
+The halls turned out to be both *grown* and constructed — many were not ruins either, 
 the dark turned out to be inhabited.
 
 Where Earth's life is organized around a sun, the life of Nox Atria VII

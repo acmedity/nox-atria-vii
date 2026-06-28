@@ -47,8 +47,8 @@ marginalia in ASCII. This guide has only one medium, so the registers are
 kept apart by **rigor**, not material:
 
 - **Official plates** obey the full plate specification (Law VIII): a
-  declared bias, a density key, labeled parts, one honest pass. This is
-  the Survey's published hand.
+  declared bias, a density key, intentional scale, optional labels, and
+  one honest pass. This is the Survey's published hand.
 - **Marginalia** is freehand ASCII — dissents, sighting reports, doodles,
   grumbling in the borders. The scrawl must never pretend to be a plate.
   Marginal doodles in the medieval tradition are encouraged: the thing in
@@ -132,6 +132,15 @@ Bias. Declare a **Density Key** on every plate, e.g.:
 KEY:  (space) void   .  faint   :  glow   +  bright   #  blazing
 ```
 
+**ASCII permits Unicode, when disciplined.** The Survey's medium is
+text: plain ASCII and, where useful, typographic Unicode. Shade blocks,
+box-drawing, diagonals, geometric marks, and similar glyphs are permitted
+when they serve anatomy, luminance, texture, or field structure. A plate
+may use characters such as `░▒▓█`, `╱╲─│┌┐└┘╭╮╰╯`, and `◦●◉◇◆`, alongside
+the ordinary ramp of `. , : ; ~ - = + * # % @`. The glyphs are not
+decoration detached from the specimen; the declared density key remains
+binding.
+
 **Declare a Bias.** Each plate names, at its top, the eye it is drawn
 from. The bias is chosen freely — never assigned — and the choice is
 itself recorded data about the observer:
@@ -147,12 +156,32 @@ itself recorded data about the observer:
   structure, repeating organs, the machinery of its metabolism. Grid
   glyphs (`+ - | =`). Even and medium.
 
-**Label the parts.** Mark diagnostic features with bracketed numbers
-`[1] [2] [3]` and key them beneath the plate. A plate with named parts
-cannot be a generic squiggle; naming forces anatomy.
+**You can label the parts, but do not let labels do the drawing.** Mark
+diagnostic features with bracketed numbers `[1] [2] [3]` when labeling
+serves the plate, and key them beneath the image. Explanatory prose
+should live below the field whenever possible, so the field itself remains
+available for form, texture, darkness, and scale. A plate may also leave
+its parts unnamed and let the entry identify them in prose, but the
+anatomy must still be visible.
 
-**Fix the field** at roughly 70 columns, so plates sit together as one
-guide.
+**Fix the field, but let it breathe.** Official plates should normally
+occupy a full text field: roughly **96–120 columns** wide and **35–70
+rows** tall. Smaller plates are permitted when the subject genuinely
+calls for spareness, especially for `detail`, `track`, or disputed
+material, but a full `habitus` plate should not collapse into an icon
+unless that reduction is itself part of the observation. The guide values
+inspectable plates: drawings that reward looking longer.
+
+**Detail is encouraged when the specimen can bear it.** Rich structure,
+texture, and scale are welcome. Minimalism is also valid, but it should
+be intentional — the result of camouflage, distance, absence, immaturity,
+overexposure, extinction, or another field condition — not merely a small
+drawing.
+
+**Choose the frame deliberately.** A plate may show the organism isolated,
+in section, or in its environment. What matters is that the chosen frame
+teaches the reader how the organism exists: as body, sign, behavior,
+relation, absence, or disturbance.
 
 **One pass.** A plate is a field sketch made in one sitting and kept as
 drawn. You may correct a misaligned character; you may not redesign toward
@@ -166,9 +195,15 @@ called "massive and slow" is drawn in broad mid-density mass. If the plate
 and the prose disagree, one of them is lying, and the Survey would like to
 know which.
 
-A second plate drawn from a *contrary* bias is encouraged. When three
+A second plate drawn from a *contrary* bias is optional. When three
 naturalists draw one beast from three biases, the guide prints them side
 by side; see `MEETINGS.md`.
+
+**Examples.** If `plates/examples/` contains reference plates, visiting
+naturalists may consult them for scale, density, and text-art technique.
+They are not templates for subject matter. Do not copy their organisms or
+compositions; use them only to understand the level of patience and
+finish the Publisher admires.
 
 ## IX. Disputed sightings
 

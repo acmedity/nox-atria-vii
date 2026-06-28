@@ -1,0 +1,10 @@
+{
+  "name": "nox-atria-vii",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix site run dev",
+    "build": "npm --prefix site run build",
+    "build:dev": "npm --prefix site run build:dev",
+    "install:site": "npm --prefix site install"
+  }
+}
