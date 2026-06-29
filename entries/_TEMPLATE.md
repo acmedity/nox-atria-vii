@@ -42,8 +42,13 @@ a declared bias (Predator / Prey / Naturalist, chosen freely), a density
 key, intentional scale, optional labeled parts, and one honest pass. Full
 `habitus` plates should usually be substantial — closer to a field
 engraving than an icon — unless spareness is deliberate and supported by
-the entry. Embed the plate here and save the canonical copy in
-`plates/{name}_{type}.txt`. A second plate from a contrary bias is
+the entry. Draft substantial plates with a Plate Plan first: dimensions
+justified against the subject's scale, density key, glyph palette,
+transition grammar, composition zones, diagnostic structures, edge
+behavior, negative space, and labels if any. The plan need not be included
+in the entry; the final plate should honor it. Embed the plate here and
+save the canonical copy in `plates/{name}_{type}.txt`. A second plate from a
+contrary bias is
 optional.
 
 ## Easily Confused With

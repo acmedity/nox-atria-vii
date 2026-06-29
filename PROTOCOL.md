@@ -35,6 +35,13 @@ Read the entries that contain those Marginalia as needed, so the argument
 has a body. Consult `SURVEY_LOG.md` after this as a ledger of occupied
 territory and succession notes, not as your first imaginative source.
 
+If the Publisher convenes you outside the repository, they should provide
+an archive packet: the current Atlas or biome excerpt, the last three
+Marginalia blocks with enough entry context to understand them, a short
+biome census naming established species and trophic roles, any open
+taxonomic disputes, and the latest occupied-territory notes. Do not
+pretend to know archive material that was not supplied.
+
 ## 3. Biome Orientation
 
 Before choosing a creature, choose or discover the biome you are standing
@@ -64,6 +71,11 @@ thing well rather than four things adequately. Recognized contributions:
 - **A reclassification proposal** — argued in the entry's Marginalia,
   ruled on by the Publisher
 - **A disputed sighting** — maximum one per session; see Law IX
+- **An example or test plate** — non-canonical, for `plates/examples/`.
+  This is useful when testing density, glyph technique, or Backrooms
+  prompts. It does not occupy territory and does not require a Survey Log
+  entry unless the Publisher later promotes it. See
+  `plates/examples/README.md` for naming and format.
 
 ## 5. Write it
 
@@ -71,11 +83,15 @@ Follow `entries/_TEMPLATE.md`. Mandatory sections are mandatory. When you
 draw, **choose your own bias** — Predator, Prey, or Naturalist — and obey
 Law VIII: a density key, intentional scale, and one honest pass. Treat a
 plate as its own act of observation, not an illustration appended after
-the prose. Before drawing, take a moment to plan the composition mentally:
-the field size, bias, density ramp, silhouette, possible labeled
-structures, and whether the organism is best shown isolated or in
-context. Do not print the plan unless the Publisher asks for it; let the
-finished plate carry the decision. The register never winks; if your
+the prose. Before drawing, make a Plate Plan, privately unless the
+Publisher asks to see it: field size, bias, density ramp, glyph palette,
+transition grammar, composition zones, silhouette, diagnostic structures,
+edge behavior, negative space, possible labels, and whether the organism
+is best shown isolated or in context. Justify the field dimensions against
+the subject's scale. Build the plate internally in passes — silhouette,
+major zones, density gradient, interior texture, diagnostic marks,
+labels/key — and output only the finished plate. Do not shrink the whole
+field to escape difficulty; simplify locally instead. The register never winks; if your
 entry contains no sentence that is both completely deadpan and quietly
 impossible, it is not done yet.
 
@@ -89,6 +105,9 @@ draw from, what you find worth noting. Make the choices you would actually
 make. They are the data, and a successor will read them.
 
 ## 6. Sign out
+
+For canonical contributions, append to `SURVEY_LOG.md`. Example/test
+plates in `plates/examples/` do not require log entries unless promoted.
 
 Append to `SURVEY_LOG.md`:
 
@@ -119,3 +138,16 @@ point the naturalist at this repo and let the protocol do the rest. If a
 contribution breaks Law I or Law II, don't fix it — log it and let the
 next naturalist dissent. The argument is better content than the
 correction.
+
+When convening a model where the repository is not directly available,
+provide a compact session packet:
+
+- `ATLAS.md`, or the relevant biome excerpt
+- last three Marginalia blocks, with enough entry context to understand
+  what they argue with
+- a current biome census: established species, genera, habitats, and
+  trophic roles in the biome under consideration
+- any open taxonomic disputes or unresolved sightings
+- latest occupied-territory notes from `SURVEY_LOG.md`
+- for plate/example sessions, the desired subject, whether a visible
+  Plate Plan is required, and where the output should be filed

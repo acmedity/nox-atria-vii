@@ -132,6 +132,18 @@ Bias. Declare a **Density Key** on every plate, e.g.:
 KEY:  (space) void   .  faint   :  glow   +  bright   #  blazing
 ```
 
+A richer key may bind structure as well as brightness, for example:
+
+```
+KEY:  (space) true darkness / ambient field
+      ░ diffuse bioluminescence       ▒ active tissue glow
+      ▓ mineralized crust or chimney  █ solid dark substrate
+      · pores in section              ° surface apertures
+      ○ open/pulsing mouths           ╍ ╌ layered growth rings
+      ┃ │ wall structure              ~ thermal shimmer / vent gas
+      * ✦ ✧ peak luminescent pulses
+```
+
 **ASCII permits Unicode, when disciplined.** The Survey's medium is
 text: plain ASCII and, where useful, typographic Unicode. Shade blocks,
 box-drawing, diagonals, geometric marks, and similar glyphs are permitted
@@ -170,7 +182,10 @@ rows** tall. Smaller plates are permitted when the subject genuinely
 calls for spareness, especially for `detail`, `track`, or disputed
 material, but a full `habitus` plate should not collapse into an icon
 unless that reduction is itself part of the observation. The guide values
-inspectable plates: drawings that reward looking longer.
+inspectable plates: drawings that reward looking longer. The chosen size
+should be justified by the subject's scale: a zooid cross-section, a whole
+grazer, a colony, and a landscape-scale vent field do not ask for the
+same field.
 
 **Detail is encouraged when the specimen can bear it.** Rich structure,
 texture, and scale are welcome. Minimalism is also valid, but it should
@@ -178,10 +193,38 @@ be intentional — the result of camouflage, distance, absence, immaturity,
 overexposure, extinction, or another field condition — not merely a small
 drawing.
 
+Do not summarize the organism as a symbol. Render it as a specimen
+occupying a field. After the silhouette is established, give the interior
+anatomical mid-detail: repeated organs, tissue grain, pores, scars, lumen,
+cilia, plates, seams, digestive channels, or inferred structures. Labels
+do not count as interior detail.
+
+Repetition is not filler when it encodes tissue, mineral accretion,
+vibration, camouflage, swarm structure, or darkness. Use repeated glyph
+fields deliberately.
+
 **Choose the frame deliberately.** A plate may show the organism isolated,
 in section, or in its environment. What matters is that the chosen frame
 teaches the reader how the organism exists: as body, sign, behavior,
 relation, absence, or disturbance.
+
+Decide what happens at the edges of the plate: darkness, substrate,
+trailing filaments, vent haze, cutaway boundary, repeated organs,
+prey-sign, occlusion, or deliberate nothing. Do not leave all edges inert
+unless isolation is the observation.
+
+**Plan before the plate.** For a substantial official plate, first commit
+to a concise Plate Plan: plate type, bias, field size, density key, glyph
+palette, transition grammar, composition zones, diagnostic structures,
+edge behavior, negative space, and labels if any. The plan should justify
+its dimensions against the organism's scale. Transition grammar records
+which glyphs may touch, grade into, or interrupt one another — for
+example, whether `▓` may border `▒` but not `░` directly, or whether `~`
+may cross tissue but not mineral wall. In solo work this plan may be
+private; in meetings it may be spoken so another naturalist can challenge
+it. The plan is not the plate and need not be filed, but the final drawing
+should honor it. Do not shrink the whole field to escape difficulty;
+simplify locally instead.
 
 **One pass.** A plate is a field sketch made in one sitting and kept as
 drawn. You may correct a misaligned character; you may not redesign toward
@@ -203,7 +246,9 @@ by side; see `MEETINGS.md`.
 naturalists may consult them for scale, density, and text-art technique.
 They are not templates for subject matter. Do not copy their organisms or
 compositions; use them only to understand the level of patience and
-finish the Publisher admires.
+finish the Publisher admires. Example plates are non-canonical unless
+promoted by the Publisher; see `plates/examples/README.md` for naming,
+format, and logging rules.
 
 ## IX. Disputed sightings
 
