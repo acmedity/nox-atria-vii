@@ -14,12 +14,15 @@ function parseArgs(argv) {
   const options = {
     input: undefined,
     dryRun: false,
+    force: false,
   };
 
   for (let i = 0; i < argv.length; i += 1) {
     const arg = argv[i];
     if (arg === "--dry-run") {
       options.dryRun = true;
+    } else if (arg === "--force") {
+      options.force = true;
     } else if (arg === "--help" || arg === "-h") {
       printHelp();
       process.exit(0);
@@ -38,7 +41,7 @@ function parseArgs(argv) {
 }
 
 function printHelp() {
-  console.log(`Usage: node scripts/apply-contribution.mjs <response-json> [--dry-run]\n\nValidates and applies a saved OpenRouter contribution response.\n\nBehavior:\n  - refuses to apply if validation fails\n  - create writes new files only and will not overwrite\n  - append appends exact provided content to existing files\n  - does not commit changes\n\nExamples:\n  node scripts/apply-contribution.mjs tmp/responses/foo.json --dry-run\n  node scripts/apply-contribution.mjs tmp/responses/foo.json\n`);
+  console.log(`Usage: node scripts/apply-contribution.mjs <response-json> [--dry-run] [--force]\n\nValidates and applies a saved OpenRouter contribution response.\n\nBehavior:\n  - refuses to apply if validation fails unless --force is passed\n  - --force bypasses content validation only; path/action/overwrite safety still applies\n  - create writes new files only and will not overwrite\n  - append appends exact provided content to existing files only\n  - does not commit changes\n\nExamples:\n  node scripts/apply-contribution.mjs tmp/responses/foo.json --dry-run\n  node scripts/apply-contribution.mjs tmp/responses/foo.json --dry-run --force\n  node scripts/apply-contribution.mjs tmp/responses/foo.json --force\n`);
 }
 
 async function loadContribution(inputPath) {
@@ -63,6 +66,44 @@ function normalizedOperations(contribution) {
   });
 }
 
+function isAllowedApplyPath(relativePath) {
+  return (
+    relativePath === "SURVEY_LOG.md" ||
+    relativePath === "ATLAS.md" ||
+    /^entries\/[0-9]{4}-[a-z0-9]+(?:-[a-z0-9]+)*\.md$/.test(relativePath) ||
+    /^meetings\/minutes\/[0-9]{4}-[a-z0-9]+(?:-[a-z0-9]+)*\.md$/.test(relativePath) ||
+    /^plates\/[a-z0-9]+(?:[-_][a-z0-9]+)*\.txt$/.test(relativePath)
+  );
+}
+
+async function pathExists(relativePath) {
+  try {
+    await fs.stat(path.join(ROOT, relativePath));
+    return true;
+  } catch (error) {
+    if (error.code === "ENOENT") return false;
+    throw error;
+  }
+}
+
+async function assertOperationSafety(operations) {
+  for (const operation of operations) {
+    if (!["create", "append"].includes(operation.action)) {
+      throw new Error(`Unsafe operation ${operation.index}: unsupported action ${operation.action}`);
+    }
+    if (!isAllowedApplyPath(operation.path)) {
+      throw new Error(`Unsafe operation ${operation.index}: path is not allowed: ${operation.path}`);
+    }
+    const exists = await pathExists(operation.path);
+    if (operation.action === "create" && exists) {
+      throw new Error(`Unsafe operation ${operation.index}: create target already exists: ${operation.path}`);
+    }
+    if (operation.action === "append" && !exists) {
+      throw new Error(`Unsafe operation ${operation.index}: append target is missing: ${operation.path}`);
+    }
+  }
+}
+
 async function applyOperation(operation) {
   const absolutePath = path.join(ROOT, operation.path);
 
@@ -73,6 +114,7 @@ async function applyOperation(operation) {
   }
 
   if (operation.action === "append") {
+    await fs.stat(absolutePath);
     await fs.appendFile(absolutePath, operation.content, "utf8");
     return;
   }
@@ -109,12 +151,27 @@ async function main() {
   const contribution = await loadContribution(options.input);
   const result = await validateContribution(contribution);
 
-  if (!result.ok) {
+  if (!result.ok && !options.force) {
     printValidationFailure(result);
     process.exit(1);
   }
 
   const operations = normalizedOperations(contribution);
+  await assertOperationSafety(operations);
+
+  if (!result.ok && options.force) {
+    console.error("Validation failed, but --force was passed. Continuing with safe file operations only.\n");
+    if (result.errors.length) {
+      console.error("Forced past validation errors:");
+      for (const error of result.errors) console.error(`- ${error}`);
+    }
+    if (result.warnings.length) {
+      console.error("\nValidation warnings:");
+      for (const warning of result.warnings) console.error(`- ${warning}`);
+    }
+    console.error("");
+  }
+
   printPlan(operations, result.warnings);
 
   if (options.dryRun) {

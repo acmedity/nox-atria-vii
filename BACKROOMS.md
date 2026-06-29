@@ -23,8 +23,14 @@ npm run distill:backrooms -- /Users/taylor/Documents/LiminalBackrooms/nox-atria-
 npm run distill:backrooms -- /Users/taylor/Documents/LiminalBackrooms/nox-atria-vii/session_YYYYMMDD_HHMMSS --model haiku4.5 --mode joint
 ```
 
-The script reports and validates the proposed changes automatically. Apply
-only after review:
+The script reports and validates the proposed changes automatically. If a
+conversion needs model-assisted correction, run:
+
+```bash
+npm run revise:contribution -- tmp/responses/ACTUAL-FILENAME.json --model haiku4.5 --instructions "Describe the correction needed."
+```
+
+Apply only after review:
 
 ```bash
 node scripts/apply-contribution.mjs tmp/responses/ACTUAL-FILENAME.json --dry-run

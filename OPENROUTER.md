@@ -56,9 +56,29 @@ npm run distill:backrooms -- /Users/taylor/Documents/LiminalBackrooms/nox-atria-
 
 If you omit `--mode`, the script treats sessions with multiple assistant speakers as `joint`, otherwise `solo`.
 
+## Revise a flagged conversion
+
+If Haiku or the validator flags problems, ask for a corrected proposal without
+re-running the whole import manually:
+
+```bash
+npm run revise:contribution -- tmp/responses/ACTUAL-FILENAME.json --model haiku4.5 \
+  --instructions "Fix the validation errors and remove any duplicated plate body from the entry markdown."
+```
+
+For longer notes:
+
+```bash
+npm run revise:contribution -- tmp/responses/ACTUAL-FILENAME.json --model haiku4.5 --instructions-file notes.txt
+```
+
+The revision script saves a new JSON under `tmp/responses/`, reports it, and
+validates it. Apply only after review.
+
 ## Review/apply
 
-The distiller prints a saved response path under `tmp/responses/` and runs report + validation automatically. To apply manually:
+The distiller and revision script print a saved response path under
+`tmp/responses/` and run report + validation automatically. To apply manually:
 
 ```bash
 node scripts/apply-contribution.mjs tmp/responses/ACTUAL-FILENAME.json --dry-run

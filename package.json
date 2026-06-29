@@ -9,6 +9,7 @@
     "models": "node scripts/distill-backrooms.mjs --list-models",
     "context": "node scripts/build-context.mjs",
     "distill:backrooms": "node scripts/distill-backrooms.mjs",
+    "revise:contribution": "node scripts/revise-contribution.mjs",
     "report": "node scripts/report-contribution.mjs",
     "validate": "node scripts/validate-contribution.mjs",
     "apply:contribution": "node scripts/apply-contribution.mjs"
