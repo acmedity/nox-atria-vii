@@ -22,7 +22,23 @@ eleventyComputed:
   {% if section.heading == "Plates" %}
     <section id="sec-{{ section.slug }}" class="entry-section">
       <h2 class="subhead">{{ section.heading }}</h2>
-      <div class="entry-prose">{{ section.html | safe }}</div>
+      {% if section.html %}<div class="entry-prose">{{ section.html | safe }}</div>{% endif %}
+      {% if entry.plateFiles and entry.plateFiles.length %}
+        <div class="entry-prose entry-plate-files">
+          {% for plate in entry.plateFiles %}
+            <figure class="entry-ascii-plate">
+              <figcaption>
+                <a href="{{ plate.url }}">Plate {{ plate.roman }} — {{ plate.filename }}</a>
+              </figcaption>
+              {% if plate.missing %}
+                <p><strong>Missing plate file:</strong> {{ plate.filename }}</p>
+              {% else %}
+                <pre><code>{{ plate.content }}</code></pre>
+              {% endif %}
+            </figure>
+          {% endfor %}
+        </div>
+      {% endif %}
     </section>
   {% endif %}
 {% endfor %}

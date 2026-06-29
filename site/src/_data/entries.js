@@ -6,6 +6,7 @@ import MarkdownIt from "markdown-it";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ENTRIES_DIR = path.resolve(__dirname, "../../../entries");
+const PLATES_DIR = path.resolve(__dirname, "../../../plates");
 
 const md = new MarkdownIt({ html: true, typographer: true });
 
@@ -42,6 +43,42 @@ function splitSections(body) {
     out.push({ heading, content, slug: slugify(heading) });
   }
   return out;
+}
+
+function stripFencedCodeBlocks(content) {
+  return content.replace(/```[^\n]*\n[\s\S]*?```/g, "").replace(/\n{3,}/g, "\n\n").trim();
+}
+
+function normalizePlateList(plates) {
+  if (!plates) return [];
+  if (Array.isArray(plates)) return plates.map(String).filter(Boolean);
+  return String(plates)
+    .replace(/^\[|\]$/g, "")
+    .split(",")
+    .map((plate) => plate.trim().replace(/^["']|["']$/g, ""))
+    .filter(Boolean);
+}
+
+function loadPlateFiles(plates) {
+  return normalizePlateList(plates).map((filename, index) => {
+    const fullPath = path.join(PLATES_DIR, filename);
+    let content = "";
+    let missing = false;
+    try {
+      content = fs.readFileSync(fullPath, "utf8").trimEnd();
+    } catch (error) {
+      if (error.code !== "ENOENT") throw error;
+      missing = true;
+    }
+    return {
+      filename,
+      index: index + 1,
+      roman: ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"][index] || String(index + 1),
+      url: `/plates/${filename}`,
+      content,
+      missing,
+    };
+  });
 }
 
 function extractMarginalia(content) {
@@ -112,12 +149,16 @@ export default function () {
     const marginalia = marginaliaSection ? extractMarginalia(marginaliaSection.content) : [];
     const bodySections = sections
       .filter(s => !/^marginalia$/i.test(s.heading))
-      .map(s => ({ ...s, html: md.render(s.content) }));
+      .map(s => {
+        const content = /^plates$/i.test(s.heading) ? stripFencedCodeBlocks(s.content) : s.content;
+        return { ...s, content, html: content ? md.render(content) : "" };
+      });
 
     const entry = {
       ...parsed.data,
       filename: f,
       sections: bodySections,
+      plateFiles: loadPlateFiles(parsed.data.plates),
       marginalia,
       url: `/entries/${parsed.data.name}/`,
       statusCanonical: canonicalStatus(parsed.data.status),

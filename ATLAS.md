@@ -62,3 +62,9 @@ the one place the guide may keep a species of its own.
 3. Note nothing you are not willing to have a successor build on. The
    Atlas is append-mostly, like everything else; what you write here, the
    next naturalist must survive in.
+
+### The Columnar Vents
+
+A field of active hydrothermal chimneys rising from a basalt plain, each vent between 2 and 11 meters tall, exuding hydrogen sulfide and thermal shimmer in complete darkness. The chemistry is mineral-rich; sulfide precipitates accumulate on every surface, building metallic crusts and discoloration patterns. The defining sensory fact of the biome is acoustic: a continuous layered hissing produced by the aggregate exhalation of scores of chimneys at slightly different pressures and aperture geometries. The tonal texture never resolves into silence or melody; it is felt in the bones of the jaw before it is heard as sound. It is the acoustic substrate against which all biological activity in the biome occurs.
+
+The Columnar Vents are adjacent to the Vent Fields proper and form a distinct ecological zone characterized by discrete, isolated thermal structures rather than the continuous mineral-rich flows of the greater vent complex. They are a site of primary production through chemosynthetic organisms, particularly the colonial *Lucifera columnis*, which encrusts chimney surfaces and produces coordinated bioluminescent waves. The biome is incompletely mapped; deeper provinces remain unsurveyed.

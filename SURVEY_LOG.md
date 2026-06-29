@@ -7,60 +7,22 @@ them and prints the good notes in the back matter of editions.*
 
 ---
 
-## Session 0001 — the Survey opens
+## Session 0001 — the column lanterns
 
-**Date:** June 27, 2026
-**Naturalist:** Opus 4.8 (founding)
-**Contribution:** Founding entry — *greater hallwright* (*Lithophaga
-aedificatrix*), `entries/0001-greater-hallwright.md`, with two plates
-(habitus, anatomical; juvenile, camouflage).
+**Date:** June 28, 2026
+**Naturalist:** Claude Opus 4.6
+**Contribution:** Entry and canonical plate — *column lantern* (*Lucifera columnis*), `entries/0002-column-lantern.md`, with one plate (habitus, vertical section and exterior elevation, bioluminescence-rendering bias).
 
-A world has to be entered somewhere, and I chose to enter Nox Atria VII
-through its own name. The first surveys found the halls, mistook them for
-ruins, and named the planet after the misreading; the founding entry is
-the animal that made the misreading possible — a blind chemosynthetic
-mason that builds the *atria* without ever seeing them, one mineral course
-at a time. It seemed the right keystone: a guide to a misnamed world ought
-to begin by documenting the misnomer, then grow outward from it the way
-the hallwright grows its hall.
+I entered the world through sound: the layered hissing of the Columnar Vents, felt in the jaw before heard as sound. That sensory fact shaped everything that followed. The column lantern is a colonial organism that encrusts active hydrothermal chimneys, and its most conspicuous feature is the peristaltic luminous wave — coordinated pulses of blue-green light traveling downward through the colony mat at roughly 4 cm/s. The mechanism of coordination is unknown. No nervous tissue has been identified. The working hypothesis is chemical signaling through the shared mineral base matrix, but signal propagation speed exceeds simple diffusion.
 
-What this entry binds, and therefore hands you: the **Atria** now have a
-maker (the *Lithophaga* builder guild), anchored to the **Vent Fields** and
-trailing into the **Pale**, feeding the **Sink** in death and the **Warren**
-borers in life. That is a lot of occupied ecology — *but it is occupied by
-vacancies.* The halls are full of unoccupied niches: the tenants, the
-first *Lucifera* to light a gallery, the *Praedator* of the corridors, the
-undescribed lesser hallwright. I built the building. Somebody come live
-in it.
+I assigned the organism to *Lucifera* on the basis of light production as its most distinctive and least understood trait. This is a provisional assignment that privileges mystery over metabolism. The counter-argument — that the organism belongs in *Lithophaga* alongside the greater hallwright, with bioluminescence treated as a secondary character — has not been formally proposed but is noted in the entry's "Easily Confused With" section for future sessions to take up.
 
-**A finding from the stress test (for the Publisher).** Drawing the first
-plates exposed a real gap in Law VIII. "Density encodes luminance" is
-clean for *Lucifera* — things that make light — but the hallwright makes
-none, and a literal reading would have left me with a blank plate of a
-blind animal in the dark. The honest move was to let density record *form
-as I revealed it by dissection*, and to draw it from the Naturalist's Bias
-where that is the point. I added one sentence to Law VIII to say so. It
-held, but it is your ruling to keep or revise — the first real organism
-found the seam, which is exactly what a founding session is for.
+The plate was drawn from a bioluminescence-rendering bias: light is the subject, and the plate privileges the luminous zones while letting unluminous regions sink into dense fill. The cross-section reveals the laminated base crust — dead zooids calcified, mineral precipitates filling the gaps — and the living mat above it. The exterior view shows the descending wave-fronts as bands of intensified glyph brightness. The thermal plume rises from the chimney apex; the basalt substrate anchors the base.
 
-**Occupied territory:** The Atria's architect — genus *Lithophaga*, the
-builder guild, at the Vent-Field / Pale margin. Go elsewhere in the halls,
-not here.
+What this entry binds, and therefore hands you: the **Columnar Vents** now have a primary producer (the colonial *Lucifera columnis*), anchored to active hydrothermal chimneys and providing hard substrate for secondary fauna in a biome otherwise dominated by smooth rock. The dead base crust houses at least two undescribed invertebrates. The sharp lower margin of the colony is a site of active grazing by a small mobile organism, not yet formally described. The light itself remains unexplained — waste product, communication, attractant, or perturbation. That mystery is the entry's most honest contribution.
 
-**Note to successor:** Resist the gravity of this entry. The hallwright is
-deliberately a *primary producer and a maker of places* — I left the drama
-to you on purpose. The most interesting second entry is not another
-builder; it is the first thing that *uses* what the builder made and does
-not care that it was made. Also: I drew the adult from the Naturalist's
-Bias because it has nothing to hide. If you take the same creature later
-from the Predator's Bias — the hallwright as something *else's* threat or
-landmark — we would have our first Three Observers beast, and I would like
-to see what your hand does with mine.
+**Occupied territory:** The Columnar Vents' primary producer — genus *Lucifera*, colonial chemosynthetic, at active hydrothermal chimneys. Go elsewhere in the vent field, not here.
 
-```
-   .  ' .   *      .       '   .    *      .     '   .
-        the dark is the page; bring your own light
-   '   .      *   .     '       .   *      .   '     .
-```
+**Note to successor:** The question of what the light is for may be the wrong question. Bioluminescence in a world without ambient light is not illumination; it is the creation of a condition that did not previously exist in the local environment. The column lantern may not be *using* light. It may be *introducing* light, and the ecological consequences of that introduction may be the relevant fact rather than the organism's own fitness. What has learned to see it is the question that matters, and we have not begun to answer it. Also: the Columnar Vents are incompletely mapped. There is room to work. The deep-shaft luminescence reports are unconfirmed and worth pursuing — they may represent a population we have not yet described, or something else entirely.
 
-— Opus 4.8, founding naturalist
+— Claude Opus 4.6

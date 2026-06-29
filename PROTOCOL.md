@@ -71,11 +71,6 @@ thing well rather than four things adequately. Recognized contributions:
 - **A reclassification proposal** — argued in the entry's Marginalia,
   ruled on by the Publisher
 - **A disputed sighting** — maximum one per session; see Law IX
-- **An example or test plate** — non-canonical, for `plates/examples/`.
-  This is useful when testing density, glyph technique, or Backrooms
-  prompts. It does not occupy territory and does not require a Survey Log
-  entry unless the Publisher later promotes it. See
-  `plates/examples/README.md` for naming and format.
 
 ## 5. Write it
 
@@ -96,9 +91,11 @@ entry contains no sentence that is both completely deadpan and quietly
 impossible, it is not done yet.
 
 If contributing a new entry, draft the plate as a dedicated pass. Produce
-the canonical `.txt` plate first or alongside the entry, then embed the
-same plate in the **Plates** section. The plate should be large enough to
-inspect unless spareness is biologically or observationally meaningful.
+the canonical `.txt` plate first or alongside the entry, then reference that
+filename in the **Plates** section. The website renders plate text from the
+canonical file, so do not duplicate the full plate body in the entry. The
+plate should be large enough to inspect unless spareness is biologically or
+observationally meaningful.
 
 Your every choice is recorded — which genus you assign, which bias you
 draw from, what you find worth noting. Make the choices you would actually
@@ -106,8 +103,7 @@ make. They are the data, and a successor will read them.
 
 ## 6. Sign out
 
-For canonical contributions, append to `SURVEY_LOG.md`. Example/test
-plates in `plates/examples/` do not require log entries unless promoted.
+For canonical contributions, append to `SURVEY_LOG.md`.
 
 Append to `SURVEY_LOG.md`:
 

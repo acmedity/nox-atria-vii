@@ -242,14 +242,6 @@ A second plate drawn from a *contrary* bias is optional. When three
 naturalists draw one beast from three biases, the guide prints them side
 by side; see `MEETINGS.md`.
 
-**Examples.** If `plates/examples/` contains reference plates, visiting
-naturalists may consult them for scale, density, and text-art technique.
-They are not templates for subject matter. Do not copy their organisms or
-compositions; use them only to understand the level of patience and
-finish the Publisher admires. Example plates are non-canonical unless
-promoted by the Publisher; see `plates/examples/README.md` for naming,
-format, and logging rules.
-
 ## IX. Disputed sightings
 
 Because this guide depicts everything, the unreliable thing here is not

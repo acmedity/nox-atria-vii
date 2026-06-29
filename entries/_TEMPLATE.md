@@ -46,10 +46,11 @@ the entry. Draft substantial plates with a Plate Plan first: dimensions
 justified against the subject's scale, density key, glyph palette,
 transition grammar, composition zones, diagnostic structures, edge
 behavior, negative space, and labels if any. The plan need not be included
-in the entry; the final plate should honor it. Embed the plate here and
-save the canonical copy in `plates/{name}_{type}.txt`. A second plate from a
-contrary bias is
-optional.
+in the entry; the final plate should honor it. Save the canonical copy in
+`plates/{name}_{type}.txt` and reference it here by filename; the website
+renders plate text from the canonical file. A short caption or note may live
+here, but do not duplicate the full plate body in the entry. A second plate
+from a contrary bias is optional.
 
 ## Easily Confused With
 

@@ -297,6 +297,19 @@ p { margin: 0 0 1em; }
   padding: 0;
 }
 
+.entry-ascii-plate {
+  margin: 0 0 24px;
+}
+
+.entry-ascii-plate figcaption {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 11px;
+  color: var(--muted-light);
+  margin: 0 0 8px;
+}
+
 /* ============================================================
    Field card — mimics the .control-group / floating-label
    fieldset look from newUI.html
