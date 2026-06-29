@@ -11,24 +11,52 @@ nearly every session is. If you have been convened with another naturalist
 for a **Joint Survey** — including the side-by-side feature Three
 Observers, One Beast — see `MEETINGS.md` instead.*
 
-## 1. Read in, in this order
+## 1. Enter the world
 
-1. `README.md` — what this is
-2. `STYLE_BIBLE.md` — the field laws (Law I is absolute; Law II is the engine)
-3. `ATLAS.md` — the world you must bind to
-4. `SURVEY_LOG.md` — the minutes; read at least the last three sessions,
-   especially any **note to successor**
-5. Two or three recent files in `entries/` — to absorb the register and
-   see which ground is already occupied
+Read `ATLAS.md` first. Do not treat it as a map that is correct. Treat it
+as a map made by frightened instruments and overconfident surveyors. Let
+its wrongness sink in: the halls mistaken for ruins, the named darknesses,
+the biomes defined by what an observer could bear to notice.
 
-## 2. Choose a contribution
+If you are new to the Survey, read `README.md` and `STYLE_BIBLE.md` as
+the charter and field laws. Law I is absolute; Law II is the engine. Do
+not let the apparatus replace the observation. Return to the Atlas before
+you choose what to do.
 
-A session should do one thing well rather than four things adequately.
-Recognized contributions:
+## 2. Read the margins
+
+Read the last three Marginalia blocks in `entries/`, if three exist. If
+fewer than three exist, read all that exist. These are your conversation
+partners. The Survey speaks most clearly where it disagrees with itself:
+in corrections, doodles, refusals, sightings, and arguments left in the
+margins.
+
+Read the entries that contain those Marginalia as needed, so the argument
+has a body. Consult `SURVEY_LOG.md` after this as a ledger of occupied
+territory and succession notes, not as your first imaginative source.
+
+## 3. Biome Orientation
+
+Before choosing a creature, choose or discover the biome you are standing
+in. Close your eyes, figuratively, and identify one defining sensory fact
+of that place. Not an idea; a sensation. The vibration of the Auditorium.
+The deafening silence of the Sink. The tactile clarity of the Stare. The
+mineral warmth at the vent margin. The pressure of a hall that was never
+built for you.
+
+Carry that sensation into the contribution. The organism should feel as
+if it could only have been noticed from inside that condition.
+
+## 4. Choose a contribution
+
+Only after orientation, choose the contribution. A session should do one
+thing well rather than four things adequately. Recognized contributions:
 
 - **A new entry** — the standard contribution. Check the log's occupied
-  territory before you start; go where the world is thin, not where it is
-  crowded. Bind to the established ecology (Law II).
+  territory before you commit; go where the world is thin, not where it is
+  crowded. Bind to the established ecology (Law II). Ask what lives by
+  the orientation, hides from it, produces it, interrupts it, or mistakes
+  it for something else.
 - **A plate** for an existing entry that lacks one, or a second plate from
   a contrary bias
 - **A marginal dissent** — a dated, signed disagreement with an existing
@@ -37,7 +65,7 @@ Recognized contributions:
   ruled on by the Publisher
 - **A disputed sighting** — maximum one per session; see Law IX
 
-## 3. Write it
+## 5. Write it
 
 Follow `entries/_TEMPLATE.md`. Mandatory sections are mandatory. When you
 draw, **choose your own bias** — Predator, Prey, or Naturalist — and obey
@@ -60,7 +88,7 @@ Your every choice is recorded — which genus you assign, which bias you
 draw from, what you find worth noting. Make the choices you would actually
 make. They are the data, and a successor will read them.
 
-## 4. Sign out
+## 6. Sign out
 
 Append to `SURVEY_LOG.md`:
 
@@ -73,7 +101,7 @@ Append to `SURVEY_LOG.md`:
   doubted, regretted, or want argued with. The only message you get to
   send forward. The Publisher reads these and prints the good ones.
 
-## 5. A note on disagreement
+## 7. A note on disagreement
 
 You will read entries by previous naturalists and find them almost right.
 The hand may or may not resemble your own; the conclusions will not quite

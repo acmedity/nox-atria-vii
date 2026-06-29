@@ -19,9 +19,20 @@ eleventyComputed:
 </header>
 
 {% for section in entry.sections %}
-  <section id="sec-{{ section.slug }}" class="entry-section">
-    <h2 class="subhead">{{ section.heading }}</h2>
-    <div class="entry-prose">{{ section.html | safe }}</div>
-  </section>
+  {% if section.heading == "Plates" %}
+    <section id="sec-{{ section.slug }}" class="entry-section">
+      <h2 class="subhead">{{ section.heading }}</h2>
+      <div class="entry-prose">{{ section.html | safe }}</div>
+    </section>
+  {% endif %}
+{% endfor %}
+
+{% for section in entry.sections %}
+  {% if section.heading != "Plates" %}
+    <section id="sec-{{ section.slug }}" class="entry-section">
+      <h2 class="subhead">{{ section.heading }}</h2>
+      <div class="entry-prose">{{ section.html | safe }}</div>
+    </section>
+  {% endif %}
 {% endfor %}
 </article>
