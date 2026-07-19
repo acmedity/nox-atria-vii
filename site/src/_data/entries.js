@@ -49,13 +49,20 @@ function stripFencedCodeBlocks(content) {
   return content.replace(/```[^\n]*\n[\s\S]*?```/g, "").replace(/\n{3,}/g, "\n\n").trim();
 }
 
+function normalizePlateName(plate) {
+  return String(plate)
+    .trim()
+    .replace(/^["']|["']$/g, "")
+    .replace(/^[./\\]*(?:plates[\\/])+/, "");
+}
+
 function normalizePlateList(plates) {
   if (!plates) return [];
-  if (Array.isArray(plates)) return plates.map(String).filter(Boolean);
+  if (Array.isArray(plates)) return plates.map(normalizePlateName).filter(Boolean);
   return String(plates)
     .replace(/^\[|\]$/g, "")
     .split(",")
-    .map((plate) => plate.trim().replace(/^["']|["']$/g, ""))
+    .map(normalizePlateName)
     .filter(Boolean);
 }
 

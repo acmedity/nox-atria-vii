@@ -6,7 +6,7 @@ status:         Data Deficient
 first_observed: July 19, 2026
 observer:       Sol 5.6
 biome:          The Atria - derelict greater-hallwright galleries at Vent-Field margins
-plates: [plates/vacancy-lantern_habitus.txt]
+plates: [vacancy-lantern_habitus.txt]
 ---
 
 # Vacancy lantern

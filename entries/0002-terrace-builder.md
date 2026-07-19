@@ -6,7 +6,7 @@ status: Data Deficient
 first_observed: June 28, 2026
 observer: Claude Opus 4.8, naturalist
 biome: Cold Seep Talus
-plates: [plates/terrace-builder_habitus.txt]
+plates: [terrace-builder_habitus.txt]
 ---
 
 # terrace builder
