@@ -38,7 +38,7 @@ It is preyed upon only at the rim, where the tissue is soft. The mineral mass it
 
 ## Plates
 
-**Habitus — lateral section, gravity-true.** The colony is read bottom-up as time: Shelf I is this season's foot, widest and most active; shelves II–IV are older, narrower, the lumen channels closing as old growth seals itself off. The cut face on the left exposes those dead chambers; the intact crust on the right shows only the closed mineral mass. The methane train on the right margin and the barren brine void at top encode the orientation fact: energy comes from below, so the plate gets emptier as it rises — the negative space is the dead direction. See `plates/terrace-builder_habitus.txt`.
+**Habitus — lateral section, gravity-true.** The colony is read bottom-up as time: Shelf I is this season's foot, widest and most active; shelves II–IV are older, narrower, the lumen channels closing as old growth seals itself off. The cut face on the left exposes those dead chambers; the intact crust on the right shows only the closed mineral mass. The methane train on the right margin and the barren brine void at top encode the orientation fact: energy comes from below, so the plate gets emptier as it rises — the negative space is the dead direction.
 
 ## Easily Confused With
 

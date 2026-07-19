@@ -91,9 +91,10 @@ entry contains no sentence that is both completely deadpan and quietly
 impossible, it is not done yet.
 
 If contributing a new entry, draft the plate as a dedicated pass. Produce
-the canonical `.txt` plate first or alongside the entry, then reference that
-filename in the **Plates** section. The website renders plate text from the
-canonical file, so do not duplicate the full plate body in the entry. The
+the canonical `.txt` plate first or alongside the entry, then list its bare
+filename in entry frontmatter. The website renders plate text from the
+canonical file inside the **Plates** section, so do not duplicate the full
+plate body, repeat the filename, or tell the reader to open the file. The
 plate should be large enough to inspect unless spareness is biologically or
 observationally meaningful.
 

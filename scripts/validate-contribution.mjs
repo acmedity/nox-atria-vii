@@ -283,7 +283,10 @@ function validateEntryFile(entryFile, allFiles, errors, warnings) {
 
   const platesSection = extractSectionContent(content, "Plates");
   if (/```/.test(platesSection)) {
-    errors.push(`${entryFile.path} Plates section should reference canonical plates/*.txt files, not embed full plate code blocks`);
+    errors.push(`${entryFile.path} Plates section should not embed full plate code blocks; canonical plate files are rendered from frontmatter`);
+  }
+  if (/(?:plates\/)?[a-z0-9]+(?:[-_][a-z0-9]+)*\.txt\b/i.test(platesSection)) {
+    errors.push(`${entryFile.path} Plates section should not repeat plate filenames; list plates in frontmatter only`);
   }
 
   const headword = frontmatterValue(frontmatter, "name");

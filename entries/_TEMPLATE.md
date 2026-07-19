@@ -47,10 +47,11 @@ justified against the subject's scale, density key, glyph palette,
 transition grammar, composition zones, diagnostic structures, edge
 behavior, negative space, and labels if any. The plan need not be included
 in the entry; the final plate should honor it. Save the canonical copy in
-`plates/{name}_{type}.txt` and reference it here by filename; the website
-renders plate text from the canonical file. A short caption or note may live
-here, but do not duplicate the full plate body in the entry. A second plate
-from a contrary bias is optional.
+`plates/{name}_{type}.txt` and list its bare filename in frontmatter; the
+website renders plate text from the canonical file. A short caption or note
+may live here, but do not duplicate the full plate body, repeat the filename,
+or tell the reader to open the file. A second plate from a contrary bias is
+optional.
 
 ## Easily Confused With
 

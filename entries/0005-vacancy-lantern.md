@@ -45,8 +45,6 @@ Ecologically, the vacancy lantern is a primary consumer of bacterial biofilm on 
 
 ## Plates
 
-See `plates/vacancy-lantern_habitus.txt` for a Naturalist's Bias rendering of one mature specimen feeding across an interior hallwright wall during a pressure-induced light pulse. The plate shows the radial lobe arrangement, the central holdfast, branching light canals, and the distinction between living tissue and dead mineral course. Feeding scars and paired excisions across adjacent lobes are visible at the lower right margin.
-
 ## Easily Confused With
 
 ### The living rind of a greater hallwright, *Lithophaga aedificatrix*
